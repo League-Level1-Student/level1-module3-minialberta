@@ -5,6 +5,7 @@ package _03_jukebox;
  */
 
 
+import java.awt.Button;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -12,7 +13,10 @@ import java.net.URL;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import javazoom.jl.player.advanced.AdvancedPlayer;
@@ -26,9 +30,9 @@ public class Jukebox implements Runnable {
 
 		// 1. Find an mp3 on your computer or on the Internet.
 		// 2. Create a Song object for that mp3
-
+Song s= new Song(mp3metal.mp3);
 		// 3. Play the Song
-
+s.play();
 		/*
 		 * 4. Create a user interface for your Jukebox so that the user can to
 		 * choose which song to play. You can use can use a different button for
@@ -36,13 +40,27 @@ public class Jukebox implements Runnable {
 		 * cover is clicked, stop the currently playing song, and play the one
 		 * that was selected.
 		 */
+if ()) {
+	
+}
+
     }
-    
-    
+    JFrame frame= new JFrame();
+    JPanel panel=new JPanel();
+  JLabel label=new JLabel();private JLabel loadImage(String "albumcover.jpg") {
+		URL imageURL = getClass().getResource("albumcover.jpg");
+		Icon icon = new ImageIcon("https://img2-placeit-net.s3-accelerate.amazonaws.com/uploads/stage/stage_image/21041/optimized_large_thumb_473-Techo-CD-Album-Cover.jpg");
+		return new JLabel(icon);
+	}
+  JButton button=new JButton();
+panel.add(button);
+    panel.add(label);
+    frame.add(panel);
+    frame.pack();
 	/* Use this method to add album covers to your Panel. */
-	private JLabel loadImage(String fileName) {
-		URL imageURL = getClass().getResource(fileName);
-		Icon icon = new ImageIcon(imageURL);
+	private JLabel loadImage(String "albumcover.jpg") {
+		URL imageURL = getClass().getResource("albumcover.jpg");
+		Icon icon = new ImageIcon("https://img2-placeit-net.s3-accelerate.amazonaws.com/uploads/stage/stage_image/21041/optimized_large_thumb_473-Techo-CD-Album-Cover.jpg");
 		return new JLabel(icon);
 	}
 
